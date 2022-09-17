@@ -195,7 +195,7 @@ window.addEventListener("message", async e => {
       playerInstance.addButton(...webvideocasterBtn);
     else
       playerInstance.addButton(...downloadBtn);
-    if (!tampermonkey && version !== "1.3.0")
+    //if (!tampermonkey && version !== "1.3.0")
       playerInstance.addButton(...updateBtn);
 
     for (let id of [1, 0, 2, 3, 4]) {
