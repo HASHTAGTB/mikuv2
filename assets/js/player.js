@@ -134,7 +134,7 @@ window.addEventListener("message", async e => {
 
     let update_iconPath = "assets/icon/update_icon.svg";
     let update_id = "update-video-button";
-    let update_tooltipText = "Aktualisieren";
+    let update_tooltipText = "Skip Opening";
 
     let rewind_iconPath = "assets/icon/replay-10s.svg";
     let rewind_id = "rewind-video-button";
@@ -160,6 +160,7 @@ window.addEventListener("message", async e => {
 
     const rewind_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() - 10)
     const forward_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() + 30)
+    const update_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() + 85)
 
     function download_ButtonClickAction() {
       if (jwplayer().getEnvironment().OS.mobile == true) {
@@ -175,13 +176,13 @@ window.addEventListener("message", async e => {
       }
     }
 
-    function update_ButtonClickAction() {
-      if (jwplayer().getEnvironment().OS.mobile == true) {
-        updateModal.style.height = "170px";
-        updateModal.style.overflow = "auto";
-      }
-      updateModal.style.visibility = updateModal.style.visibility === "hidden" ? "visible" : "hidden";
-    }
+    //function update_ButtonClickAction() {
+    //  if (jwplayer().getEnvironment().OS.mobile == true) {
+    //    updateModal.style.height = "170px";
+    //    updateModal.style.overflow = "auto";
+    //  }
+    //  updateModal.style.visibility = updateModal.style.visibility === "hidden" ? "visible" : "hidden";
+    //}
 
     const forwardBtn = [forward_iconPath, forward_tooltipText, forward_ButtonClickAction, forward_id]
     const rewindBtn = [rewind_iconPath, rewind_tooltipText, rewind_ButtonClickAction, rewind_id]
