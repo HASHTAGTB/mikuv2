@@ -157,17 +157,8 @@ window.addEventListener("message", async e => {
     const updateModal = document.querySelectorAll(".modal")[1];
     document.querySelectorAll("button.close-modal")[0].onclick = () => downloadModal.style.visibility = "hidden";
     document.querySelectorAll("button.close-modal")[1].onclick = () => updateModal.style.visibility = "hidden";
-
     
-    function rewind_ButtonClickAction() {
-      if (jwplayer().seek(jwplayer().getPosition() < 10) {
-          jwplayer().seek(jwplayer().getPosition() = 0);
-      }
-      else {
-          jwplayer().seek(jwplayer().getPosition() - 10);
-      }
-    }
-    //const rewind_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() - 10)
+    const rewind_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() - 10)
     const forward_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() + 30)
     const update_ButtonClickAction = () => jwplayer().seek(jwplayer().getPosition() + 85)
 
